@@ -24,7 +24,6 @@ while (cap.isOpened()):
 
 
 # cerrar si el trabajo se ha terminado
-
 cap.release()
 out.release()
 cv2.destroyAllWindows()
