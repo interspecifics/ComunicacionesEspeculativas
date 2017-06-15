@@ -1,18 +1,22 @@
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import cv2
+import sys
+
 
 cap = cv2.VideoCapture(0)
 
-#Crear code y crear objeto VideoWriter
+# Crear code y crear objeto VideoWriter
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640,480))
+out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))
 
 while (cap.isOpened()):
-    ret,frame = cap.read()
-    if ret==True:
+    ret, frame = cap.read()
+    if ret == True:
         frame = cv2.flip(frame, 0)
 
-        #escribir la imagen invertida
+        # escribir la imagen invertida
         out.write(frame)
 
         cv2.imshow('frame', frame)
