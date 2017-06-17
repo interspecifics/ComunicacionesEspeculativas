@@ -30,6 +30,8 @@ while(1):
     g = cv2.getTrackbarPos('G','image')
     b = cv2.getTrackbarPos('B','image')
     s = cv2.getTrackbarPos(switch, 'image')
+    
+
 
     if s == 0:
         img[:] = 0
