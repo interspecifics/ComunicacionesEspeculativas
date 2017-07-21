@@ -58,6 +58,17 @@ Bacterial AI machine
 
 >sudo mkdir /mnt/usbdrive
 
-**6- c
+**6- Check the dev directory
+
+>/dev/sd*
+
+**7- To mount the drive to your mount point ‘usbdrive‘.
+
+>sudo mount /dev/sda1 /mnt/usbdrive
+
+**8- Disconnect / Unmount A Drive**
+
+>sudo umount /dev/sda1
+
 
 
