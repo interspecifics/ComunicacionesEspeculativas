@@ -110,7 +110,7 @@ if __name__ == "__main__":
     ap.add_argument("-v", "--video",                                        help="path to the video input file")
     ap.add_argument("-s", "--show",     default="False",                    help="video output enable")
     ap.add_argument("-w", "--write",    default="True",                     help="write output images")
-    ap.add_argument("-m", "--model",    default=".\models\kmeans_1500555372.cpk",  help="load a custom model for cluster labeling")
+    ap.add_argument("-m", "--model",    default="./models/kmeans_1500555372.cpk",  help="load a custom model for cluster labeling")
     ap.add_argument("-c", "--osc",      default="False",                    help="send output messages")
     ap.add_argument("-n", "--canny",    default="False",                    help="uses canny edge detector")
     ap.add_argument("-d", "--direct",   default="False",                    help="discrete directions enable")
