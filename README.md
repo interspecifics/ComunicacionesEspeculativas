@@ -50,4 +50,14 @@ Bacterial AI machine
 
 >sudo umount /dev/sda1
 
+**4- Format a drive to EXT4**
+
+>sudo mkfs.ext4 /dev/sda1 -L untitled
+
+**5- Create a mount point**
+
+>sudo mkdir /mnt/usbdrive
+
+**6- c
+
 
