@@ -18,9 +18,9 @@ import subprocess
 subprocess.Popen(" python ce_ff_02.py -v \"0\" -s \"False\" -w \"False\"", shell=True)
 
 #Ejecutar con distintias opciones
-$ python ce_ff_4.py -v "./TL6.mp4" -w "False" -s "True" -c "True"
-$ python ce_ff_4.py -v "./TL9.mp4" -w "True" -s "True" -c "False" -o "./TL9_out"
-
+$ python ce_ff_06.py -v "./TL6.mp4" -w "False" -s "True" -c "True"
+$ python ce_ff_06.py -v "./TL9.mp4" -w "True" -s "True" -c "False" -o "./TL9_out"
+$ python ce_ff_06.py -v "./videos/TL13.mp4" -w "False" -s "True" -n "True" -c "True"
 
 ====================================================================
 
