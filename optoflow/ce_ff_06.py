@@ -236,10 +236,12 @@ if __name__ == "__main__":
         for i,(new,old) in enumerate(zip(good_new,good_old)):
             a,b = new.ravel()
             c,d = old.ravel()
-            #cv2.line (vfield, (a,b),(c,d), (127, 125, 125),  1)
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(vfield, discretize_dir(c,d,a,b), (int(a+2),int(b-2)), font, 0.3,(255,255,255), 1)
-            cv2.rectangle(vfield, (a, b), (int(a+10), int(b-10)), (125, 125, 125), 1) 
+            if (args["direct"] == "False"):
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                cv2.putText(vfield, discretize_dir(c,d,a,b), (int(a+2),int(b-2)), font, 0.3,(255,255,255), 1)
+                cv2.rectangle(vfield, (a, b), (int(a+10), int(b-10)), (125, 125, 125), 1)
+            else:
+                cv2.line (vfield, (a,b),(c,d), (127, 125, 125),  1)
             #cv2.rectangle(img, pt1, pt2, color[, thickness[, lineType[, shift]]]) 
             #cv2.putText(img,'Hello World!',(10,500), font, 1,(255,255,255),2)
             #cv2.
@@ -263,7 +265,7 @@ if __name__ == "__main__":
             all_angles.append(new_angles)
         # wait
         #if (not fromCam and not fromVideo):
-        k = cv2.waitKey(1000) & 0xff
+        k = cv2.waitKey(10) & 0xff
         if k == 27:
             break
         # refresh reference
