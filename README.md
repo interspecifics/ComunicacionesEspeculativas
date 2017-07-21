@@ -2,29 +2,29 @@
 Bacterial AI machine
 
 
--Instalación netatalk-
+**Instalación netatalk**
 
-Step 1: Installation
 
-Installation:
+1- Installation:
 
-sudo apt-get update
+> sudo apt-get update
 
-sudo apt-get install netatalk
-Step 2: Configuration
+>sudo apt-get install netatalk
 
--Stop the service:
+2- Configuration
 
-sudo /etc/init.d/netatalk stop
+**Stop the service:**
 
--Open the configuration file:
+>sudo /etc/init.d/netatalk stop
 
-sudo nano /etc/netatalk/AppleVolumes.default
+**Open the configuration file:**
 
--You can edit the mount folder if you wish or leave the default value:
+>sudo nano /etc/netatalk/AppleVolumes.default
 
-~/ "Home Directory"
+**You can edit the mount folder if you wish or leave the default value:**
 
--Start the service again
+>~/ "Home Directory"
 
-sudo /etc/init.d/netatalk start
+**Start the service again**
+
+>sudo /etc/init.d/netatalk start
