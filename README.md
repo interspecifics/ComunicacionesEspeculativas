@@ -2,7 +2,7 @@
 Bacterial AI machine
 
 
-##Instalación netatalk
+## Instalación netatalk
 
 1- Installation:
 
@@ -28,7 +28,7 @@ Bacterial AI machine
 
 >sudo /etc/init.d/netatalk start
 
-##Configurar USB como storage local
+## Configurar USB como storage local
 
 1 - To mount a USB drive:
 
