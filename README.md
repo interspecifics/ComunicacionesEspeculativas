@@ -30,7 +30,7 @@ Bacterial AI machine
 
 ## Configurar USB como storage local
 
-1 - To mount a USB drive:
+**1 - To mount a USB drive:**
 
 >sudo mkdir /mnt/usbdrive
 
@@ -38,10 +38,16 @@ Bacterial AI machine
 
 >ls /mnt/usbdrive
 
-2 - To list your file systems:
+**2 - To list your file systems:**
 
 >sudo fdisk -l
 
 >sudo mount -l
 
 >df -h
+
+**3- Before disconnecting a USB drive:**
+
+>sudo umount /dev/sda1
+
+
