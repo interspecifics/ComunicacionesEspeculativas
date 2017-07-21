@@ -28,3 +28,21 @@ Bacterial AI machine
 **Start the service again**
 
 >sudo /etc/init.d/netatalk start
+
+** Configurar USB como storage local**
+
+1 - To mount a USB drive:
+
+>sudo mkdir /mnt/usbdrive
+
+>sudo mount /dev/sda1 /mnt/usbdrive
+
+>ls /mnt/usbdrive
+
+2 - To list your file systems:
+
+>sudo fdisk -l
+
+>sudo mount -l
+
+>df -h
