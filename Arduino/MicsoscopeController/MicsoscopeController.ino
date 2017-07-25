@@ -19,7 +19,8 @@ int stepCount = 0;         // number of steps the motor has taken
 int buttonState1 = 0;
 int buttonState2 = 0;
 int buttonState3 = 0;
-int potvalue = 0;
+int potValue = 0;
+int writeValue;
 
 
 void setup() {
@@ -36,6 +37,11 @@ void setup() {
 
 void loop() {
 
+potValue = analogRead(pot);
+writeValue = (255./1023) *potValue;
+
+analogWrite(led, writeValue);
+    
     buttonState1 = digitalRead(buttonFor);
     buttonState2 = digitalRead(buttonBack);
     buttonState3 = digitalRead(buttonSteps);
@@ -74,7 +80,7 @@ void loop() {
     if (buttonState3 == HIGH) {
 
       if (buttonState1 == LOW) {
-        myStepper.step(5);
+        myStepper.step(1);
         Serial.print("adelante:");
         Serial.println(stepCount);
         stepCount++;
@@ -87,7 +93,7 @@ void loop() {
       }
 
       if (buttonState2 == LOW) {
-        myStepper.step(-5);
+        myStepper.step(-1);
         Serial.print("atras:");
         Serial.println(stepCount);
         stepCount++;
