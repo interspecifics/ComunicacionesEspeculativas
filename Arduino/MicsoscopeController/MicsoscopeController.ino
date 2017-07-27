@@ -1,6 +1,6 @@
 
 #include <Stepper.h>
-const int buttonFor = 9;
+const int buttonFor = 9; 
 const int buttonBack = 10;
 const int buttonSteps = 11;
 
@@ -12,7 +12,7 @@ int delayval = 500; // delay for half a second
 const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
 // for your motor
 
-// initialize the stepper library on pins 8 through 11:
+// initialize the stepper library on pins 4 through 7:
 Stepper myStepper(stepsPerRevolution, 4, 5, 6, 7);
 
 int stepCount = 0;         // number of steps the motor has taken
@@ -37,6 +37,7 @@ void setup() {
 
 void loop() {
 
+//____________ led brightness 
 potValue = analogRead(pot);
 writeValue = (255./1023) *potValue;
 
@@ -46,12 +47,12 @@ analogWrite(led, writeValue);
     buttonState2 = digitalRead(buttonBack);
     buttonState3 = digitalRead(buttonSteps);
 
-    //-------- controller for number of stpes ( 400 steps per click )
+//_____________controller for number of stpes ( 400 steps per click )
 
     if (buttonState3 == LOW) {
 
       if (buttonState1 == LOW) {
-        myStepper.step(stepsPerRevolution * 2);
+        myStepper.step(stepsPerRevolution);
         Serial.print("adelante:");
         Serial.println(stepCount);
         stepCount++;
@@ -63,7 +64,7 @@ analogWrite(led, writeValue);
       }
 
       if (buttonState2 == LOW) {
-        myStepper.step(-stepsPerRevolution * 2);
+        myStepper.step(-stepsPerRevolution);
         Serial.print("atras:");
         Serial.println(stepCount);
         stepCount++;
@@ -75,7 +76,7 @@ analogWrite(led, writeValue);
       }
     }
 
-    //-------- controller for number of stpes ( 5 steps per click )
+//___________controller for number of stpes ( 1 step per click )
 
     if (buttonState3 == HIGH) {
 
