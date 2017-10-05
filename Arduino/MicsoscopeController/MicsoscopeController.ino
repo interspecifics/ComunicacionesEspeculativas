@@ -5,6 +5,7 @@ const int buttonBack = 10;
 const int buttonSteps = 11;
 
 int led = 3;
+int led2 = 12;
 int pot = 0;
 
 int delayval = 500; // delay for half a second
@@ -31,6 +32,7 @@ void setup() {
   pinMode(buttonSteps, INPUT);
   pinMode(pot, INPUT);
   pinMode(led, OUTPUT);
+  pinMode(led2, OUTPUT);
 
   myStepper.setSpeed(30);
 }
@@ -42,6 +44,8 @@ potValue = analogRead(pot);
 writeValue = (255./1023) *potValue;
 
 analogWrite(led, writeValue);
+analogWrite(led2, writeValue);
+
     
     buttonState1 = digitalRead(buttonFor);
     buttonState2 = digitalRead(buttonBack);
