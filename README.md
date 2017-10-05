@@ -1,10 +1,8 @@
 # ComunicacionesEspeculativas
-Bacterial AI machine
-
-![the system](https://github.com/interspecifics/ComunicacionesEspeculativas/blob/master/ComunicacionEspeculativa.jpg?raw=true)
-
 Es un proyecto basado en una máquina que es capaz de observar y aprender de
 microorganismos para crear un score audiovisual a partir de los patrones que encuentre en su comportamiento. Este proyecto se apoya en la creación de una inteligencia artificial, la cual reconoce comportamientos organizados reiterativos en cultivos biológicos y los transforma en eventos que dota de una gestualidad audiovisual específica con el fin de lograr una composición autogenerativa que responde a las lógicas de decisión que esta inteligencia construye con el tiempo. 
+
+![the system](https://github.com/interspecifics/ComunicacionesEspeculativas/blob/master/ComunicacionEspeculativa.jpg?raw=true)
 
 ## Instalación netatalk
 
