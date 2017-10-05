@@ -1,6 +1,7 @@
 # ComunicacionesEspeculativas
 Bacterial AI machine
 
+![the system](https://github.com/interspecifics/micro-ritmos/blob/master/img/micro_ritmos_1.jpg?raw=true)
 
 ## Instalación netatalk
 
