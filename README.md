@@ -4,13 +4,17 @@ microorganismos para crear un score audiovisual a partir de los patrones que enc
 
 ![the system](https://github.com/interspecifics/ComunicacionesEspeculativas/blob/master/ComunicacionEspeculativa.jpg?raw=true)
 
-# Instalacion CV2.4.9 en Mac
+## Instalación CV2.4.9 en Mac
 1 - Instalar brew http://brew.sh/
 
-2 - >brew tap homebrew/science
+>brew tap homebrew/science
 
-3 - >brew install opencv
+>brew install opencv
 
+## Instalación CV2 en la raspberry
+
+seguir el tutorial que se encuentra aquí:
+https://www.pyimagesearch.com/2015/02/23/install-opencv-and-python-on-your-raspberry-pi-2-and-b/
 
 ## Instalación netatalk
 
