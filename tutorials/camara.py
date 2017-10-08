@@ -4,7 +4,7 @@ import cv2
 import sys
 
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 while(True):
     #grabar cuadro por cuadro
