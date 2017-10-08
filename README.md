@@ -7,16 +7,16 @@ microorganismos para crear un score audiovisual a partir de los patrones que enc
 # Instalacion CV2.4.9 en Mac
 1 - Instalar brew http://brew.sh/
 
-2 - > brew tap homebrew/science
+2 - >brew tap homebrew/science
 
-3- > brew install opencv
+3 - >brew install opencv
 
 
 ## Instalación netatalk
 
 1- Installation:
 
-> sudo apt-get update
+>sudo apt-get update
 
 >sudo apt-get install netatalk
 
