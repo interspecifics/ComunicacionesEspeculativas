@@ -10,7 +10,7 @@ const int stepsPerRevolution = 200;
 // create an instance of the stepper class, specifying
 // the number of steps of the motor and the pins it's
 // attached to
-Stepper myStepper1(stepsPerRevolution, 19, 20, 18, 21);
+Stepper myStepper1(stepsPerRevolution, 8, 9, 10, 11);
 Stepper myStepper2(stepsPerRevolution, 4, 5, 6, 7);
 
 int Xvalue = 0;
@@ -96,8 +96,8 @@ else {
  
   
  if (Yvalue > 850 && Yvalue < 1023) {
-    myStepper2.step(-1);
-    myStepper1.step(1);
+    myStepper2.step(1);
+    myStepper1.step(-1);
         Serial.println(stepCount);
         stepCount++;
   } 
@@ -110,8 +110,8 @@ else {
 
 
  if (Yvalue < 400 && Xvalue < 600) {
-   myStepper2.step(1);
-   myStepper1.step(-1);
+   myStepper2.step(-1);
+   myStepper1.step(1);
         Serial.print("myStepper2: atras");
         stepCount++;
 }
