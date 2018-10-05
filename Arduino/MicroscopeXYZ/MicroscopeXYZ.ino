@@ -20,7 +20,6 @@ Stepper myStepper2(stepsPerRevolution, 8, 9, 10, 11);
 Stepper myStepper(stepsPerRevolution, 22, 23, 21, 20);
 
 
-int stepCount = 0;         // number of steps the motor has taken
 int buttonState1 = 0;
 int buttonState2 = 0;
 int potValue = 0;
@@ -29,6 +28,8 @@ int Yvalue = 0;
 int Xwrite;
 int Ywrite;
 int writeValue;
+int stepCount = 0;         // number of steps the motor has taken
+
 
 
 void setup() {
@@ -43,6 +44,8 @@ void setup() {
   pinMode(led2, OUTPUT);
 
   myStepper.setSpeed(30);
+  myStepper1.setSpeed(60);
+  myStepper2.setSpeed(60);
 }
 
 void loop() {
