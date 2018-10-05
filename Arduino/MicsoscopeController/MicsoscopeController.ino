@@ -56,7 +56,7 @@ analogWrite(led2, writeValue);
     if (buttonState3 == LOW) {
 
       if (buttonState1 == LOW) {
-        myStepper.step(stepsPerRevolution);
+        myStepper.step(1);
         Serial.print("adelante:");
         Serial.println(stepCount);
         stepCount++;
@@ -68,7 +68,7 @@ analogWrite(led2, writeValue);
       }
 
       if (buttonState2 == LOW) {
-        myStepper.step(-stepsPerRevolution);
+        myStepper.step(-1);
         Serial.print("atras:");
         Serial.println(stepCount);
         stepCount++;

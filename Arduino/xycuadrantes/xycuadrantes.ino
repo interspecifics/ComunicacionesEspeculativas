@@ -10,8 +10,8 @@ const int stepsPerRevolution = 200;
 // create an instance of the stepper class, specifying
 // the number of steps of the motor and the pins it's
 // attached to
-Stepper myStepper1(stepsPerRevolution, 8, 9, 10, 11);
-Stepper myStepper2(stepsPerRevolution, 4, 5, 6, 7);
+Stepper myStepper1(stepsPerRevolution, 4, 5, 6, 7);
+Stepper myStepper2(stepsPerRevolution, 8, 9, 10, 11);
 
 int Xvalue = 0;
 int Yvalue = 0;
