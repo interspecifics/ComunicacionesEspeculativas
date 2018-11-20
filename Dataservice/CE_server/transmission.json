@@ -1,0 +1,82 @@
+{
+	"name": "transmission_mutek_montreal",
+	"description": "mutek montreal",
+	"ip_address_a": "10.200.2.9",
+	"osc_port_a": 8000,
+	"ip_address_b": "192.168.1.79",
+	"osc_port_b": 8000,
+	"resolution": 30,
+	"sleeptime": 0.02,
+	"sequence": [
+					{
+						"index": 0,
+						"duration": 180,
+						"name": "TL07",
+						"data_filename": "V07HD_HC.json",
+						"feats_filename": "feats_V07HD.json"
+					},
+					{
+						"index": 1,
+						"duration": 180,
+						"name": "TL10",
+						"data_filename": "V10HD_HC.json",
+						"feats_filename": "feats_V10HD.json"
+					},
+					{
+						"index": 2,
+						"duration": 180,
+						"name": "TL05",
+						"data_filename": "V05HD_HC.json",
+						"feats_filename": "feats_V05HD.json"
+					},
+					{
+						"index": 3,
+						"duration": 180,
+						"name": "TLXY",
+						"data_filename": "VXYHD_HC.json",
+						"feats_filename": "feats_VXYHD.json"
+					},
+					{
+						"index": 4,
+						"duration": 180,
+						"name": "TL12",
+						"data_filename": "V12HD_HC.json",
+						"feats_filename": "feats_V12HD.json"
+					},
+					{
+						"index": 5,
+						"duration": 180,
+						"name": "TL15",
+						"data_filename": "V15HD_HC.json",
+						"feats_filename": "feats_V15HD.json"
+					},
+					{
+						"index": 6,
+						"duration": 180,
+						"name": "TL11",
+						"data_filename": "V11HD_HC.json",
+						"feats_filename": "feats_V11HD.json"
+					},
+					{
+						"index": 7,
+						"duration": 180,
+						"name": "TL09",
+						"data_filename": "V09HD_HC.json",
+						"feats_filename": "feats_V09HD.json"
+					},
+					{
+						"index": 8,
+						"duration": 180,
+						"name": "TL14",
+						"data_filename": "V14HD_HC.json",
+						"feats_filename": "feats_V14HD.json"
+					},
+					{
+						"index": 9,
+						"duration": 180,
+						"name": "TL16",
+						"data_filename": "V16HD_HC.json",
+						"feats_filename": "feats_V16HD.json"
+					}
+				]
+}
