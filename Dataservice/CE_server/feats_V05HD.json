@@ -1,0 +1,57 @@
+[
+	{
+		"index": 0,
+		"type": "saturn_cw01",
+		"init_frame": 0,
+		"end_frame": 50,
+		"coordinates": [570, 553],
+		"radius": 240,
+		"resolution": 60
+	},
+	{
+		"index": 1,
+		"type": "saturn_cw02",
+		"init_frame": 0,
+		"end_frame": 50,
+		"coordinates": [1085, 427],
+		"radius": 60,
+		"resolution": 60
+	},
+	{
+		"index": 2,
+		"type": "saturn_cw03",
+		"init_frame": 0,
+		"end_frame": 50,
+		"coordinates": [1337, 509],
+		"radius": 60,
+		"resolution": 60
+	},
+	{
+		"index": 3,
+		"type": "saturn_aw01",
+		"init_frame": 0,
+		"end_frame": 50,
+		"coordinates": [805,188],
+		"radius": 120,
+		"resolution": 60
+	},
+		{
+		"index": 4,
+		"type": "saturn_aw02",
+		"init_frame": 0,
+		"end_frame": 50,
+		"coordinates": [1130, 700],
+		"radius": 60,
+		"resolution": 60
+	},
+	{
+		"index": 5,
+		"type": "proyectil",
+		"init_frame": 16,
+		"end_frame": 48,
+		"coordinates": [1605, 525],
+		"radius": 420,
+		"resolution": 60
+	}
+
+]
