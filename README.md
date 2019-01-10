@@ -86,7 +86,9 @@ https://www.pyimagesearch.com/2015/02/23/install-opencv-and-python-on-your-raspb
 
 ## Biotracker XY
 
-Para la construcción de biotracker xy es necesario la impresión de la piezas que se encuentran aquí 
+Para la construcción de biotracker xy es necesario la impresión de la piezas que se encuentran aquí :
+
+https://github.com/interspecifics/ComunicacionesEspeculativas/tree/master/Impresion%203d%20XY
 
 ![Biotracker](http://interspecifics.cc/comunicacionesespeculativas/wp-content/uploads/2018/05/IMG_2033.jpg?raw=true)
 
@@ -94,5 +96,14 @@ Para la construcción de biotracker xy es necesario la impresión de la piezas q
 
 
 ## Controllers 
+
+Actualmente existe dos placas electronicas para el control de los dos dispositivos disponibles el Microscopio Z y el Biotracker X/Y
+
+![microminiz](https://github.com/interspecifics/ComunicacionesEspeculativas/blob/master/Electronics/micromini.png?raw=true)
+
+![Biotracker Controller ](https://github.com/interspecifics/ComunicacionesEspeculativas/blob/master/Electronics/biotrackercontroller.jpeg?raw=true)
+
+
+
 
 
