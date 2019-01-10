@@ -84,5 +84,15 @@ https://www.pyimagesearch.com/2015/02/23/install-opencv-and-python-on-your-raspb
 
 >sudo umount /dev/sda1
 
+## Biotracker XY
+
+Para la construcción de biotracker xy es necesario la impresión de la piezas que se encuentran aquí 
+
+![Biotracker](http://interspecifics.cc/comunicacionesespeculativas/wp-content/uploads/2018/05/IMG_2033.jpg?raw=true)
+
+![Biotracker](http://interspecifics.cc/comunicacionesespeculativas/wp-content/uploads/2018/05/IMG_2030.jpg?raw=true)
+
+
+## Controllers 
 
 
