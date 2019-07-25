@@ -20,7 +20,18 @@ Fernán Federici 2017
 use <threads.scad>
 include <picam_2_push_fit.scad>         
 
+
+
+
 corr=0.2;// sometimes used for printing imperfections
+sunny_space=6;
+wall=2.5;
+base_xy=16;
+screw_d=21;//distance between screw holes
+screw_r=2/2;
+screw_hold_r=2;
+M12_r=12/2;
+mount_h = 10;
 int_r=22/2;// internal r of cylinder according to edmund optics
 RMS_r=(0.8*25.4)/2; //10,16 mmm of r for DIN (and JIS) objectives that uses RMS, this is about 20.3mm (with thread step of about 0.7mm).
 tube_r=29.85/2;//external size
@@ -60,6 +71,7 @@ joint_z=2;
 filter_cube_top_z=10;  
 extra_doublet=10; 
 MM_h=5;
+base_h=6;
 $fn=60;
 
 
@@ -77,7 +89,8 @@ CE_ext_tube();
 
 
 //RPIcam_cover();
-cam_adapter();
+//cam_adapter();
+cam_adapter_v2();
 //focus_adjust_tube();
 //lens_holder(); // or lens_holder_V2()
 //lens_holder_ring();
@@ -122,6 +135,43 @@ union(){
 }}
   
 
+
+module cam_adapter_v2(){
+    difference() {
+                union() {
+                    //threaded part
+                    translate([0,0,M3_brass_push_h/1.5 + base_h-corr])       
+   color("lightblue") english_thread (diameter=((int_focal_corr_r*2)-(3*corr))/25.4, threads_per_inch=32, length=(M3_brass_push_h/1.5+corr)/25.4,internal=false, n_starts=1, thread_size=-1, groove=true,square=false, rectangle=0, angle=30, taper=0, leadin=1);
+				translate([0,sunny_space/2,base_h/2+wall/2])
+					#color("green")  cube([base_xy, base_xy+sunny_space, base_h+wall], center = true);
+				color("Red") translate([screw_d/2, 0, 0])
+					cylinder(r = screw_hold_r, h = base_h/2);
+				color("Red") translate(-[screw_d/2, 0, 0])
+					cylinder(r = screw_hold_r, h = base_h/2);
+				color("Red") translate([0,0,base_h/2/2])
+						cube([screw_d, 4, base_h/2], center = true);
+		}
+		translate([0,sunny_space/2,base_h/2-wall])
+			color("blue") cube([base_xy - wall, base_xy+sunny_space - wall, base_h*2], center = true);
+		translate([screw_d/2, 0, 0])
+			cylinder(r = screw_r, h = base_h);
+		translate([-screw_d/2, 0, 0])
+			cylinder(r = screw_r, h = base_h);
+	
+        translate([0, 0, base_h-corr])     cylinder(d=((M12_r*2)+(corr*2)), h=mount_h*2);
+	}}
+  
+    
+module lens_holder(){//top part merges top part of Lens_mount (11.3mm), 10_ext and fine_focus
+//render() {
+echo(str ("tot_len_top is ",tot_len_top));
+difference() {
+     cylinder(r=tube_r,h=ext_bot_len,$fn=100);
+     translate([ 0.00, 0.00, -corr ])   color ("lightblue") english_thread (diameter=(M27_r*2)/25.4, threads_per_inch=32, length=(lens_holder_pos+corr)/25.4,internal=true, n_starts=1, thread_size=-1, groove=true,square=false, rectangle=0, angle=30, taper=0, leadin=1);
+    translate([ 0.00, 0.00, corr ]) color ("red") english_thread (diameter=((foc_adj_r*2)+(3*corr))/25.4, threads_per_inch=32, length=((ext_bot_len)+(2*corr))/25.4,internal=true, n_starts=1, thread_size=-1, groove=true,square=false, rectangle=0, angle=30, taper=0, leadin=1);
+    translate([0,tube_r, ext_bot_len- M3_brass_push_h]) rotate([90,90,0]) cylinder(r=M3_brass_push_h/2,h=(M3_brass_push_h)*2,$fn=100);
+    }}//} //uncomment if you want to use render() while editing
+    
 module focus_adjust_tube(){
     difference() {
     union(){ 
