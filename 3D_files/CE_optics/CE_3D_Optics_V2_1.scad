@@ -18,6 +18,7 @@ Fernán Federici 2017
 */
 
 use <threads.scad>
+use <logitech_c270.scad>
 include <picam_2_push_fit.scad>         
 
 
@@ -72,6 +73,7 @@ filter_cube_top_z=10;
 extra_doublet=10; 
 MM_h=5;
 base_h=6;
+mounting_hole_x = 8.25;
 $fn=60;
 
 
@@ -90,12 +92,16 @@ CE_ext_tube();
 
 //RPIcam_cover();
 //cam_adapter();
-cam_adapter_v2();
+//cam_adapter_v2();
 //focus_adjust_tube();
 //lens_holder(); // or lens_holder_V2()
 //lens_holder_ring();
 //ext_tube(); // or ext_fluo_top() and ext_fluo_bottom() is using polarizers/filters
 //camera_mount_FF();
+//CE_c270();
+lens_holderV2();   //this one is to use a achromat doublet for the 100X (the ones used with yeast samples)
+
+
 
 module RPIcam_cover(){
     fit_corr=1;//makes it bigger to fit and avoid damaging the PCB
@@ -143,7 +149,7 @@ module cam_adapter_v2(){
                     translate([0,0,M3_brass_push_h/1.5 + base_h-corr])       
    color("lightblue") english_thread (diameter=((int_focal_corr_r*2)-(3*corr))/25.4, threads_per_inch=32, length=(M3_brass_push_h/1.5+corr)/25.4,internal=false, n_starts=1, thread_size=-1, groove=true,square=false, rectangle=0, angle=30, taper=0, leadin=1);
 				translate([0,sunny_space/2,base_h/2+wall/2])
-					#color("green")  cube([base_xy, base_xy+sunny_space, base_h+wall], center = true);
+					color("green")  cube([base_xy, base_xy+sunny_space, base_h+wall], center = true);
 				color("Red") translate([screw_d/2, 0, 0])
 					cylinder(r = screw_hold_r, h = base_h/2);
 				color("Red") translate(-[screw_d/2, 0, 0])
@@ -161,7 +167,19 @@ module cam_adapter_v2(){
         translate([0, 0, base_h-corr])     cylinder(d=((M12_r*2)+(corr*2)), h=mount_h*2);
 	}}
   
-    
+//    translate([ 0.00, 0.00, 10.00 ]) cam_adapter_v2();
+
+//logitech c270 camera adapter (from openflexure)
+ module CE_c270(){
+     c270_camera_mount();
+                         //threaded part
+         difference() {  
+   color("lightblue") english_thread (diameter=((int_focal_corr_r*2)-(3*corr))/25.4, threads_per_inch=32, length=(M3_brass_push_h/1.3+corr)/25.4,internal=false, n_starts=1, thread_size=-1, groove=true,square=false, rectangle=0, angle=30, taper=0, leadin=1);
+        translate([0, 0, -corr])     cylinder(d=((M12_r*2)+(corr*2)), h=mount_h*2);
+               rotate([ 0.00, 0.00, -45.00 ]) reflect([1,0,0]) translate([mounting_hole_x,0,0]) mounting_hole();
+	}
+     }
+ 
 module lens_holder(){//top part merges top part of Lens_mount (11.3mm), 10_ext and fine_focus
 //render() {
 echo(str ("tot_len_top is ",tot_len_top));
