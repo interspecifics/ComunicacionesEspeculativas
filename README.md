@@ -97,7 +97,7 @@ https://github.com/interspecifics/ComunicacionesEspeculativas/tree/master/Impres
 
 ## Controllers 
 
-Actualmente existe dos placas electronicas para el control de los dos dispositivos disponibles el Microscopio Z y el Biotracker X/Y
+Actualmente existe dos placas electrónicas para el control de los dos dispositivos disponibles el Microscopio Z y el Biotracker X/Y
 
 ![microminiz](https://github.com/interspecifics/ComunicacionesEspeculativas/blob/master/Electronics/micromini.png?raw=true)
 
